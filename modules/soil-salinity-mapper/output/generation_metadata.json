@@ -1,0 +1,66 @@
+{
+  "status": "generated",
+  "mode": "observed_halophyte_locations",
+  "region": "Karachi Coast",
+  "study_area": "Karachi Coast",
+  "source": "Niaz et al., 2021, Table 2",
+  "observed_value_type": "GPS-Geotagged Halophyte Species Locations",
+  "ec_available": false,
+  "ec_display": "Not reported in source",
+  "points_rendered": 30,
+  "total_points": 30,
+  "scientific_notice": "Observed GPS-geotagged halophyte species locations from the Karachi Coast source table.",
+  "vegetation_summary": [
+    {
+      "year": 1989,
+      "vegetative_area_km2": 12.58,
+      "non_vegetative_area_km2": 121.2,
+      "total_area_km2": 133.78
+    },
+    {
+      "year": 1994,
+      "vegetative_area_km2": 21.7,
+      "non_vegetative_area_km2": 114.5,
+      "total_area_km2": 136.2
+    },
+    {
+      "year": 1999,
+      "vegetative_area_km2": 13.8,
+      "non_vegetative_area_km2": 124.0,
+      "total_area_km2": 137.8
+    },
+    {
+      "year": 2004,
+      "vegetative_area_km2": 13.9,
+      "non_vegetative_area_km2": 124.8,
+      "total_area_km2": 138.7
+    },
+    {
+      "year": 2009,
+      "vegetative_area_km2": 18.6,
+      "non_vegetative_area_km2": 120.6,
+      "total_area_km2": 139.2
+    },
+    {
+      "year": 2014,
+      "vegetative_area_km2": 14.5,
+      "non_vegetative_area_km2": 126.9,
+      "total_area_km2": 141.4
+    },
+    {
+      "year": 2018,
+      "vegetative_area_km2": 15.4,
+      "non_vegetative_area_km2": 127.8,
+      "total_area_km2": 143.2
+    }
+  ],
+  "outputs": {
+    "observed_points_csv": "modules/soil-salinity-mapper/data/karachi_halophyte_points.csv",
+    "vegetation_coverage_csv": "modules/soil-salinity-mapper/data/karachi_vegetation_coverage.csv",
+    "salinity_grid_csv": "modules/soil-salinity-mapper/output/salinity_grid.csv",
+    "pakistan_boundary_geojson": "modules/soil-salinity-mapper/output/pakistan_boundary.geojson",
+    "target_provinces_geojson": "modules/soil-salinity-mapper/output/target_provinces.geojson",
+    "soil_salinity_map_html": "modules/soil-salinity-mapper/output/soil_salinity_map.html",
+    "public_map_html": "public/modules/soil-salinity-mapping/generated-map.html"
+  }
+}

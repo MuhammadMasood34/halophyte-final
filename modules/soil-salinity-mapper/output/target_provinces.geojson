@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "shapeName": "Karachi Coast Study Area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              66.4558,
+              24.424200000000003
+            ],
+            [
+              67.711,
+              24.424200000000003
+            ],
+            [
+              67.711,
+              24.9421
+            ],
+            [
+              66.4558,
+              24.9421
+            ],
+            [
+              66.4558,
+              24.424200000000003
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

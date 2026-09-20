@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1eea1d2038e080983880f0b2d54a17b7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1eea1d2038e080983880f0b2d54a17b7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1eea1d2038e080983880f0b2d54a17b7 = L.map(
+                "map_1eea1d2038e080983880f0b2d54a17b7",
+                {
+                    center: [24.790923333333332, 66.98556666666667],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_47ec774fdc3ca48b465a347403f0aab2 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_47ec774fdc3ca48b465a347403f0aab2.addTo(map_1eea1d2038e080983880f0b2d54a17b7);
+        
+    
+        function geo_json_e9a43331329c2d556930ed459ff28d74_styler(feature) {
+            switch(feature.properties.shapeName) {
+                default:
+                    return {"color": "#6f7d78", "fillOpacity": 0, "weight": 1.2};
+            }
+        }
+
+        function geo_json_e9a43331329c2d556930ed459ff28d74_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_e9a43331329c2d556930ed459ff28d74 = L.geoJson(null, {
+                onEachFeature: geo_json_e9a43331329c2d556930ed459ff28d74_onEachFeature,
+            
+                style: geo_json_e9a43331329c2d556930ed459ff28d74_styler,
+            ...{
+}
+        });
+
+        function geo_json_e9a43331329c2d556930ed459ff28d74_add (data) {
+            geo_json_e9a43331329c2d556930ed459ff28d74
+                .addData(data);
+        }
+            geo_json_e9a43331329c2d556930ed459ff28d74_add({"features": [{"geometry": {"coordinates": [[[66.4558, 24.424200000000003], [67.711, 24.424200000000003], [67.711, 24.9421], [66.4558, 24.9421], [66.4558, 24.424200000000003]]], "type": "Polygon"}, "properties": {"shapeName": "Karachi Coast Context"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e9a43331329c2d556930ed459ff28d74.addTo(map_1eea1d2038e080983880f0b2d54a17b7);
+        
+    
+        function geo_json_c3a6e8fcbfc0bfbb00dc606386cda1ba_styler(feature) {
+            switch(feature.properties.shapeName) {
+                default:
+                    return {"color": "#205f55", "fillColor": "#dfe8e3", "fillOpacity": 0.16, "weight": 1.8};
+            }
+        }
+
+        function geo_json_c3a6e8fcbfc0bfbb00dc606386cda1ba_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_c3a6e8fcbfc0bfbb00dc606386cda1ba = L.geoJson(null, {
+                onEachFeature: geo_json_c3a6e8fcbfc0bfbb00dc606386cda1ba_onEachFeature,
+            
+                style: geo_json_c3a6e8fcbfc0bfbb00dc606386cda1ba_styler,
+            ...{
+}
+        });
+
+        function geo_json_c3a6e8fcbfc0bfbb00dc606386cda1ba_add (data) {
+            geo_json_c3a6e8fcbfc0bfbb00dc606386cda1ba
+                .addData(data);
+        }
+            geo_json_c3a6e8fcbfc0bfbb00dc606386cda1ba_add({"features": [{"geometry": {"coordinates": [[[66.4558, 24.424200000000003], [67.711, 24.424200000000003], [67.711, 24.9421], [66.4558, 24.9421], [66.4558, 24.424200000000003]]], "type": "Polygon"}, "properties": {"shapeName": "Karachi Coast Study Area"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_c3a6e8fcbfc0bfbb00dc606386cda1ba.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["shapeName"];
+    let aliases = ["Study Area:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_c3a6e8fcbfc0bfbb00dc606386cda1ba.addTo(map_1eea1d2038e080983880f0b2d54a17b7);
+        
+    
+            var feature_group_9021574231659ecb1e7620da0d8ddc5f = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_22b0e9ebf6d23e96c42f61a502657075 = L.circleMarker(
+                [24.547, 67.631],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_7ace69865df64396322ac1103cb276b7 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_80aef21340c232083efa033e70178559 = $(`<div id="html_80aef21340c232083efa033e70178559" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Acacia nilotica</td></tr> <tr><th>Family</th><td>Mimosaceae</td></tr> <tr><th>Latitude</th><td>24.5470</td></tr> <tr><th>Longitude</th><td>67.6310</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_7ace69865df64396322ac1103cb276b7.setContent(html_80aef21340c232083efa033e70178559);
+            
+        
+
+        circle_marker_22b0e9ebf6d23e96c42f61a502657075.bindPopup(popup_7ace69865df64396322ac1103cb276b7)
+        ;
+
+        
+    
+    
+            circle_marker_22b0e9ebf6d23e96c42f61a502657075.bindTooltip(
+                `<div>
+                     Acacia nilotica
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_09c19b9b2a4c96a987e7d24970be7cfc = L.circleMarker(
+                [24.8082, 67.0178],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_2a99d11c25d8b6feb930fbcf5d2c4947 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_8ab9c15c607c17cbd888635f4c80c91b = $(`<div id="html_8ab9c15c607c17cbd888635f4c80c91b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Aeluropus lagopoides</td></tr> <tr><th>Family</th><td>Poaceae</td></tr> <tr><th>Latitude</th><td>24.8082</td></tr> <tr><th>Longitude</th><td>67.0178</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_2a99d11c25d8b6feb930fbcf5d2c4947.setContent(html_8ab9c15c607c17cbd888635f4c80c91b);
+            
+        
+
+        circle_marker_09c19b9b2a4c96a987e7d24970be7cfc.bindPopup(popup_2a99d11c25d8b6feb930fbcf5d2c4947)
+        ;
+
+        
+    
+    
+            circle_marker_09c19b9b2a4c96a987e7d24970be7cfc.bindTooltip(
+                `<div>
+                     Aeluropus lagopoides
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9ef47f9751dbfaffd78008caedead8da = L.circleMarker(
+                [24.764, 67.0695],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_73b3f669c23a39d52507a005ccced802 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_483a49261c4ac6bdbf921e9763c91789 = $(`<div id="html_483a49261c4ac6bdbf921e9763c91789" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Aerva javanica</td></tr> <tr><th>Family</th><td>Amaranthaceae</td></tr> <tr><th>Latitude</th><td>24.7640</td></tr> <tr><th>Longitude</th><td>67.0695</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_73b3f669c23a39d52507a005ccced802.setContent(html_483a49261c4ac6bdbf921e9763c91789);
+            
+        
+
+        circle_marker_9ef47f9751dbfaffd78008caedead8da.bindPopup(popup_73b3f669c23a39d52507a005ccced802)
+        ;
+
+        
+    
+    
+            circle_marker_9ef47f9751dbfaffd78008caedead8da.bindTooltip(
+                `<div>
+                     Aerva javanica
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a44149a20133b13bc6d5c5a9d2cdbf9 = L.circleMarker(
+                [24.8436, 66.9072],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_740280180e0f84773e6c18fbb7474758 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_3364456b02d48c4986b38b7a65648bce = $(`<div id="html_3364456b02d48c4986b38b7a65648bce" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Arthrocnemum macrostachyum</td></tr> <tr><th>Family</th><td>Amaranthaceae</td></tr> <tr><th>Latitude</th><td>24.8436</td></tr> <tr><th>Longitude</th><td>66.9072</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_740280180e0f84773e6c18fbb7474758.setContent(html_3364456b02d48c4986b38b7a65648bce);
+            
+        
+
+        circle_marker_1a44149a20133b13bc6d5c5a9d2cdbf9.bindPopup(popup_740280180e0f84773e6c18fbb7474758)
+        ;
+
+        
+    
+    
+            circle_marker_1a44149a20133b13bc6d5c5a9d2cdbf9.bindTooltip(
+                `<div>
+                     Arthrocnemum macrostachyum
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b6fad6727382219d69c93743c9c38a97 = L.circleMarker(
+                [24.7637, 67.0694],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_724b8ca75a13732370105a55b89ba962 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_033bbd64e0675062e47d9387993cfbef = $(`<div id="html_033bbd64e0675062e47d9387993cfbef" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Atriplex stocksii</td></tr> <tr><th>Family</th><td>Amaranthaceae</td></tr> <tr><th>Latitude</th><td>24.7637</td></tr> <tr><th>Longitude</th><td>67.0694</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_724b8ca75a13732370105a55b89ba962.setContent(html_033bbd64e0675062e47d9387993cfbef);
+            
+        
+
+        circle_marker_b6fad6727382219d69c93743c9c38a97.bindPopup(popup_724b8ca75a13732370105a55b89ba962)
+        ;
+
+        
+    
+    
+            circle_marker_b6fad6727382219d69c93743c9c38a97.bindTooltip(
+                `<div>
+                     Atriplex stocksii
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cb27ec2fc0d2559831b2b3cc6829021f = L.circleMarker(
+                [24.8361, 66.9189],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_b6c8d0214d6b01ebadc4f7e6aad6aee1 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_18edee048612cb44a7972a8e057cd542 = $(`<div id="html_18edee048612cb44a7972a8e057cd542" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Avicennia marina</td></tr> <tr><th>Family</th><td>Avicenniaceae</td></tr> <tr><th>Latitude</th><td>24.8361</td></tr> <tr><th>Longitude</th><td>66.9189</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_b6c8d0214d6b01ebadc4f7e6aad6aee1.setContent(html_18edee048612cb44a7972a8e057cd542);
+            
+        
+
+        circle_marker_cb27ec2fc0d2559831b2b3cc6829021f.bindPopup(popup_b6c8d0214d6b01ebadc4f7e6aad6aee1)
+        ;
+
+        
+    
+    
+            circle_marker_cb27ec2fc0d2559831b2b3cc6829021f.bindTooltip(
+                `<div>
+                     Avicennia marina
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b9a619867f50a59dd78c973b8427a89 = L.circleMarker(
+                [24.8405, 66.9108],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_acb9aa34efaa6cd63c444d643c53dc0b = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_da2710eac23add1af7b031d6b3b5192a = $(`<div id="html_da2710eac23add1af7b031d6b3b5192a" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Calotropis procera</td></tr> <tr><th>Family</th><td>Asclepediaceae</td></tr> <tr><th>Latitude</th><td>24.8405</td></tr> <tr><th>Longitude</th><td>66.9108</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_acb9aa34efaa6cd63c444d643c53dc0b.setContent(html_da2710eac23add1af7b031d6b3b5192a);
+            
+        
+
+        circle_marker_1b9a619867f50a59dd78c973b8427a89.bindPopup(popup_acb9aa34efaa6cd63c444d643c53dc0b)
+        ;
+
+        
+    
+    
+            circle_marker_1b9a619867f50a59dd78c973b8427a89.bindTooltip(
+                `<div>
+                     Calotropis procera
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_feb3695fd2dec18c4ddd5231dbb910cc = L.circleMarker(
+                [24.7511, 67.0871],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_44c2a18fd092f827cecef3f67746901d = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_9b9f51e927c8b250116c663950a38ad8 = $(`<div id="html_9b9f51e927c8b250116c663950a38ad8" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Cassia italica</td></tr> <tr><th>Family</th><td>Caesalpiniaceae</td></tr> <tr><th>Latitude</th><td>24.7511</td></tr> <tr><th>Longitude</th><td>67.0871</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_44c2a18fd092f827cecef3f67746901d.setContent(html_9b9f51e927c8b250116c663950a38ad8);
+            
+        
+
+        circle_marker_feb3695fd2dec18c4ddd5231dbb910cc.bindPopup(popup_44c2a18fd092f827cecef3f67746901d)
+        ;
+
+        
+    
+    
+            circle_marker_feb3695fd2dec18c4ddd5231dbb910cc.bindTooltip(
+                `<div>
+                     Cassia italica
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f850bb5d8ceb1e70e814625a9732b02f = L.circleMarker(
+                [24.8528, 66.8833],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_ca3b351470729eae38b9066362a9f2d7 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_59c5013a6e1b342a3d7e362c5b1d34c8 = $(`<div id="html_59c5013a6e1b342a3d7e362c5b1d34c8" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Cistanche tubulosa</td></tr> <tr><th>Family</th><td>Orobanchaceae</td></tr> <tr><th>Latitude</th><td>24.8528</td></tr> <tr><th>Longitude</th><td>66.8833</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_ca3b351470729eae38b9066362a9f2d7.setContent(html_59c5013a6e1b342a3d7e362c5b1d34c8);
+            
+        
+
+        circle_marker_f850bb5d8ceb1e70e814625a9732b02f.bindPopup(popup_ca3b351470729eae38b9066362a9f2d7)
+        ;
+
+        
+    
+    
+            circle_marker_f850bb5d8ceb1e70e814625a9732b02f.bindTooltip(
+                `<div>
+                     Cistanche tubulosa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b1cebb3b051b64e57d244f6053b369a2 = L.circleMarker(
+                [24.7643, 67.0698],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_a1ba235634025f173c62d82e099c7173 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_3773ea712b5b6b57db9bd2487598dd01 = $(`<div id="html_3773ea712b5b6b57db9bd2487598dd01" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Cressa cretica</td></tr> <tr><th>Family</th><td>Convolvulaceae</td></tr> <tr><th>Latitude</th><td>24.7643</td></tr> <tr><th>Longitude</th><td>67.0698</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_a1ba235634025f173c62d82e099c7173.setContent(html_3773ea712b5b6b57db9bd2487598dd01);
+            
+        
+
+        circle_marker_b1cebb3b051b64e57d244f6053b369a2.bindPopup(popup_a1ba235634025f173c62d82e099c7173)
+        ;
+
+        
+    
+    
+            circle_marker_b1cebb3b051b64e57d244f6053b369a2.bindTooltip(
+                `<div>
+                     Cressa cretica
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac975fe66205f5ee5611178871ca763f = L.circleMarker(
+                [24.8619, 66.8538],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_1c7f43db1cd8f21125342d9cf1b8f716 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_2fb7c0af5778903d7c4d164d75b27925 = $(`<div id="html_2fb7c0af5778903d7c4d164d75b27925" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Convolvulus arvensis</td></tr> <tr><th>Family</th><td>Convolvulaceae</td></tr> <tr><th>Latitude</th><td>24.8619</td></tr> <tr><th>Longitude</th><td>66.8538</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_1c7f43db1cd8f21125342d9cf1b8f716.setContent(html_2fb7c0af5778903d7c4d164d75b27925);
+            
+        
+
+        circle_marker_ac975fe66205f5ee5611178871ca763f.bindPopup(popup_1c7f43db1cd8f21125342d9cf1b8f716)
+        ;
+
+        
+    
+    
+            circle_marker_ac975fe66205f5ee5611178871ca763f.bindTooltip(
+                `<div>
+                     Convolvulus arvensis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_81b368780bbb5a54e118db8551363429 = L.circleMarker(
+                [24.8597, 66.8678],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_55d4ff32518cd957e4d567d2498f0398 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_85dd721657c02f52c21c42d12ffd6b10 = $(`<div id="html_85dd721657c02f52c21c42d12ffd6b10" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Cyperus conglomeratus</td></tr> <tr><th>Family</th><td>Cyperaceae</td></tr> <tr><th>Latitude</th><td>24.8597</td></tr> <tr><th>Longitude</th><td>66.8678</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_55d4ff32518cd957e4d567d2498f0398.setContent(html_85dd721657c02f52c21c42d12ffd6b10);
+            
+        
+
+        circle_marker_81b368780bbb5a54e118db8551363429.bindPopup(popup_55d4ff32518cd957e4d567d2498f0398)
+        ;
+
+        
+    
+    
+            circle_marker_81b368780bbb5a54e118db8551363429.bindTooltip(
+                `<div>
+                     Cyperus conglomeratus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a5bf448f8885d13e4547a5a4ad64fcbd = L.circleMarker(
+                [24.7641, 67.0697],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_e2804ae133aeb5a117c6fdf9bba9e4d3 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_50be23f48a750e9b8e64444b755f7427 = $(`<div id="html_50be23f48a750e9b8e64444b755f7427" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Fagonia indica</td></tr> <tr><th>Family</th><td>Zygophyllaceae</td></tr> <tr><th>Latitude</th><td>24.7641</td></tr> <tr><th>Longitude</th><td>67.0697</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_e2804ae133aeb5a117c6fdf9bba9e4d3.setContent(html_50be23f48a750e9b8e64444b755f7427);
+            
+        
+
+        circle_marker_a5bf448f8885d13e4547a5a4ad64fcbd.bindPopup(popup_e2804ae133aeb5a117c6fdf9bba9e4d3)
+        ;
+
+        
+    
+    
+            circle_marker_a5bf448f8885d13e4547a5a4ad64fcbd.bindTooltip(
+                `<div>
+                     Fagonia indica
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_becaf415a63a1d124552843725617475 = L.circleMarker(
+                [24.8025, 67.0271],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_47e53bf10115e390eb85a4d90f566682 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_81a68fd0935e2f2b36f4df4ed2cb6eb6 = $(`<div id="html_81a68fd0935e2f2b36f4df4ed2cb6eb6" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Halopyrum mucronatum</td></tr> <tr><th>Family</th><td>Poaceae</td></tr> <tr><th>Latitude</th><td>24.8025</td></tr> <tr><th>Longitude</th><td>67.0271</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_47e53bf10115e390eb85a4d90f566682.setContent(html_81a68fd0935e2f2b36f4df4ed2cb6eb6);
+            
+        
+
+        circle_marker_becaf415a63a1d124552843725617475.bindPopup(popup_47e53bf10115e390eb85a4d90f566682)
+        ;
+
+        
+    
+    
+            circle_marker_becaf415a63a1d124552843725617475.bindTooltip(
+                `<div>
+                     Halopyrum mucronatum
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08e6d3178a8922a0da521504b3e953b7 = L.circleMarker(
+                [24.7736, 67.0589],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_09c5733c7e124f4f67777f3c8dcd5ef6 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_50c68a86902cecc5d6957c624f219a2d = $(`<div id="html_50c68a86902cecc5d6957c624f219a2d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Heliotropium aucheri</td></tr> <tr><th>Family</th><td>Boraginaceae</td></tr> <tr><th>Latitude</th><td>24.7736</td></tr> <tr><th>Longitude</th><td>67.0589</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_09c5733c7e124f4f67777f3c8dcd5ef6.setContent(html_50c68a86902cecc5d6957c624f219a2d);
+            
+        
+
+        circle_marker_08e6d3178a8922a0da521504b3e953b7.bindPopup(popup_09c5733c7e124f4f67777f3c8dcd5ef6)
+        ;
+
+        
+    
+    
+            circle_marker_08e6d3178a8922a0da521504b3e953b7.bindTooltip(
+                `<div>
+                     Heliotropium aucheri
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_06cf388e2eead5ae129211285fcaa500 = L.circleMarker(
+                [24.8407, 66.9107],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_8d64283d9b85270e49b3dd73e6fcb191 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_9f91f1c2cbc92dab76d6a554347beabb = $(`<div id="html_9f91f1c2cbc92dab76d6a554347beabb" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Indigofera hebipetala</td></tr> <tr><th>Family</th><td>Fabaceae</td></tr> <tr><th>Latitude</th><td>24.8407</td></tr> <tr><th>Longitude</th><td>66.9107</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_8d64283d9b85270e49b3dd73e6fcb191.setContent(html_9f91f1c2cbc92dab76d6a554347beabb);
+            
+        
+
+        circle_marker_06cf388e2eead5ae129211285fcaa500.bindPopup(popup_8d64283d9b85270e49b3dd73e6fcb191)
+        ;
+
+        
+    
+    
+            circle_marker_06cf388e2eead5ae129211285fcaa500.bindTooltip(
+                `<div>
+                     Indigofera hebipetala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_74c682f3c1ea809ac6a7e003de928deb = L.circleMarker(
+                [24.8502, 66.8868],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_de77e4e82ddedb9fbe2380010f32f649 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_aab3027c564f4b2a745773985f716d7c = $(`<div id="html_aab3027c564f4b2a745773985f716d7c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Ipomoea pes-caprae</td></tr> <tr><th>Family</th><td>Convolvulaceae</td></tr> <tr><th>Latitude</th><td>24.8502</td></tr> <tr><th>Longitude</th><td>66.8868</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_de77e4e82ddedb9fbe2380010f32f649.setContent(html_aab3027c564f4b2a745773985f716d7c);
+            
+        
+
+        circle_marker_74c682f3c1ea809ac6a7e003de928deb.bindPopup(popup_de77e4e82ddedb9fbe2380010f32f649)
+        ;
+
+        
+    
+    
+            circle_marker_74c682f3c1ea809ac6a7e003de928deb.bindTooltip(
+                `<div>
+                     Ipomoea pes-caprae
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_95863fe36b3332eed959b12bba3fb2c5 = L.circleMarker(
+                [24.8621, 66.8528],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_833725c4b8dadc959894ed4441595fb4 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_fdfbfadc5ab0fd443d876aa05abe3926 = $(`<div id="html_fdfbfadc5ab0fd443d876aa05abe3926" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Limonium stocksii</td></tr> <tr><th>Family</th><td>Plumbaginaceae</td></tr> <tr><th>Latitude</th><td>24.8621</td></tr> <tr><th>Longitude</th><td>66.8528</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_833725c4b8dadc959894ed4441595fb4.setContent(html_fdfbfadc5ab0fd443d876aa05abe3926);
+            
+        
+
+        circle_marker_95863fe36b3332eed959b12bba3fb2c5.bindPopup(popup_833725c4b8dadc959894ed4441595fb4)
+        ;
+
+        
+    
+    
+            circle_marker_95863fe36b3332eed959b12bba3fb2c5.bindTooltip(
+                `<div>
+                     Limonium stocksii
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ce27c9e4eefa4db71731cb20196f2d6 = L.circleMarker(
+                [24.8406, 66.9107],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_43683d6a627cac49324492763963f2e1 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_5b839b9837ffa34b8d937a363f677c15 = $(`<div id="html_5b839b9837ffa34b8d937a363f677c15" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Lotus garcini</td></tr> <tr><th>Family</th><td>Papilionaceae</td></tr> <tr><th>Latitude</th><td>24.8406</td></tr> <tr><th>Longitude</th><td>66.9107</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_43683d6a627cac49324492763963f2e1.setContent(html_5b839b9837ffa34b8d937a363f677c15);
+            
+        
+
+        circle_marker_6ce27c9e4eefa4db71731cb20196f2d6.bindPopup(popup_43683d6a627cac49324492763963f2e1)
+        ;
+
+        
+    
+    
+            circle_marker_6ce27c9e4eefa4db71731cb20196f2d6.bindTooltip(
+                `<div>
+                     Lotus garcini
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe0e1a21833b6b14ac9490d42327eb8b = L.circleMarker(
+                [24.8082, 67.0178],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_c810840e45cd14a08ef88c022a7374e3 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_0ae5b20c019389f3b723d51103c11b6c = $(`<div id="html_0ae5b20c019389f3b723d51103c11b6c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Paspalum pasploides</td></tr> <tr><th>Family</th><td>Poaceae</td></tr> <tr><th>Latitude</th><td>24.8082</td></tr> <tr><th>Longitude</th><td>67.0178</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_c810840e45cd14a08ef88c022a7374e3.setContent(html_0ae5b20c019389f3b723d51103c11b6c);
+            
+        
+
+        circle_marker_fe0e1a21833b6b14ac9490d42327eb8b.bindPopup(popup_c810840e45cd14a08ef88c022a7374e3)
+        ;
+
+        
+    
+    
+            circle_marker_fe0e1a21833b6b14ac9490d42327eb8b.bindTooltip(
+                `<div>
+                     Paspalum pasploides
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_498fd098a2938dec8c73b4d867125167 = L.circleMarker(
+                [24.5042, 66.5358],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_6a407f1036f75314d93ff866886184b7 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_c6ec37d88639fd60bf68e085ceb43790 = $(`<div id="html_c6ec37d88639fd60bf68e085ceb43790" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Prosopis juliflora</td></tr> <tr><th>Family</th><td>Mimosaceae</td></tr> <tr><th>Latitude</th><td>24.5042</td></tr> <tr><th>Longitude</th><td>66.5358</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_6a407f1036f75314d93ff866886184b7.setContent(html_c6ec37d88639fd60bf68e085ceb43790);
+            
+        
+
+        circle_marker_498fd098a2938dec8c73b4d867125167.bindPopup(popup_6a407f1036f75314d93ff866886184b7)
+        ;
+
+        
+    
+    
+            circle_marker_498fd098a2938dec8c73b4d867125167.bindTooltip(
+                `<div>
+                     Prosopis juliflora
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9e144f089a31f61f86af6efe81fa2e1b = L.circleMarker(
+                [24.7643, 67.0701],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_b5109c886eb9955314349bf7dd637f27 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_1d7909945f80c8d7127fc648b9f34d74 = $(`<div id="html_1d7909945f80c8d7127fc648b9f34d74" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Salsola imbricata</td></tr> <tr><th>Family</th><td>Amaranthaceae</td></tr> <tr><th>Latitude</th><td>24.7643</td></tr> <tr><th>Longitude</th><td>67.0701</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_b5109c886eb9955314349bf7dd637f27.setContent(html_1d7909945f80c8d7127fc648b9f34d74);
+            
+        
+
+        circle_marker_9e144f089a31f61f86af6efe81fa2e1b.bindPopup(popup_b5109c886eb9955314349bf7dd637f27)
+        ;
+
+        
+    
+    
+            circle_marker_9e144f089a31f61f86af6efe81fa2e1b.bindTooltip(
+                `<div>
+                     Salsola imbricata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_28ae3847777c9e3a871b80c1c946148f = L.circleMarker(
+                [24.8487, 66.8945],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_d48289e3af40c583465fc986ce7d5eba = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_c013b6826f5e7c64e576f07046a32d2b = $(`<div id="html_c013b6826f5e7c64e576f07046a32d2b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Salvadora persica</td></tr> <tr><th>Family</th><td>Salvadoraceae</td></tr> <tr><th>Latitude</th><td>24.8487</td></tr> <tr><th>Longitude</th><td>66.8945</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_d48289e3af40c583465fc986ce7d5eba.setContent(html_c013b6826f5e7c64e576f07046a32d2b);
+            
+        
+
+        circle_marker_28ae3847777c9e3a871b80c1c946148f.bindPopup(popup_d48289e3af40c583465fc986ce7d5eba)
+        ;
+
+        
+    
+    
+            circle_marker_28ae3847777c9e3a871b80c1c946148f.bindTooltip(
+                `<div>
+                     Salvadora persica
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e2ed58072883dd02af24457e921c6128 = L.circleMarker(
+                [24.7728, 67.0592],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_46ac61bbc77160f913229e23be93803f = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_29a659848c49113e7bf4a8585a3cf40e = $(`<div id="html_29a659848c49113e7bf4a8585a3cf40e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Serna incana</td></tr> <tr><th>Family</th><td>Malvaceae</td></tr> <tr><th>Latitude</th><td>24.7728</td></tr> <tr><th>Longitude</th><td>67.0592</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_46ac61bbc77160f913229e23be93803f.setContent(html_29a659848c49113e7bf4a8585a3cf40e);
+            
+        
+
+        circle_marker_e2ed58072883dd02af24457e921c6128.bindPopup(popup_46ac61bbc77160f913229e23be93803f)
+        ;
+
+        
+    
+    
+            circle_marker_e2ed58072883dd02af24457e921c6128.bindTooltip(
+                `<div>
+                     Serna incana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f7f8ec4623c48182578ab7f4c5c412e7 = L.circleMarker(
+                [24.8408, 66.9106],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_c52056b3fa42e4836d831ea1bb2372cd = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_18157a8b434ce20efa2b8c23cc307dca = $(`<div id="html_18157a8b434ce20efa2b8c23cc307dca" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Sporobolus tremulus</td></tr> <tr><th>Family</th><td>Poaceae</td></tr> <tr><th>Latitude</th><td>24.8408</td></tr> <tr><th>Longitude</th><td>66.9106</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_c52056b3fa42e4836d831ea1bb2372cd.setContent(html_18157a8b434ce20efa2b8c23cc307dca);
+            
+        
+
+        circle_marker_f7f8ec4623c48182578ab7f4c5c412e7.bindPopup(popup_c52056b3fa42e4836d831ea1bb2372cd)
+        ;
+
+        
+    
+    
+            circle_marker_f7f8ec4623c48182578ab7f4c5c412e7.bindTooltip(
+                `<div>
+                     Sporobolus tremulus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_85fb7237d5e759cbb7219c008c39a8f4 = L.circleMarker(
+                [24.8116, 67.0078],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_d78c594c42282f67bac38f70e6a4b2c4 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_d2a4ef433459353ecd0fb338f3050c96 = $(`<div id="html_d2a4ef433459353ecd0fb338f3050c96" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Suaeda fruticosa</td></tr> <tr><th>Family</th><td>Amaranthaceae</td></tr> <tr><th>Latitude</th><td>24.8116</td></tr> <tr><th>Longitude</th><td>67.0078</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_d78c594c42282f67bac38f70e6a4b2c4.setContent(html_d2a4ef433459353ecd0fb338f3050c96);
+            
+        
+
+        circle_marker_85fb7237d5e759cbb7219c008c39a8f4.bindPopup(popup_d78c594c42282f67bac38f70e6a4b2c4)
+        ;
+
+        
+    
+    
+            circle_marker_85fb7237d5e759cbb7219c008c39a8f4.bindTooltip(
+                `<div>
+                     Suaeda fruticosa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c02bed7918d16315f77889e0bd47161f = L.circleMarker(
+                [24.7512, 67.0868],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_2de6fc26c1c1404d403e548d537c7a9c = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_c2ec06103f8b5e75cfc8b81570f005c5 = $(`<div id="html_c2ec06103f8b5e75cfc8b81570f005c5" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Tamarix indica</td></tr> <tr><th>Family</th><td>Tamaricaceae</td></tr> <tr><th>Latitude</th><td>24.7512</td></tr> <tr><th>Longitude</th><td>67.0868</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_2de6fc26c1c1404d403e548d537c7a9c.setContent(html_c2ec06103f8b5e75cfc8b81570f005c5);
+            
+        
+
+        circle_marker_c02bed7918d16315f77889e0bd47161f.bindPopup(popup_2de6fc26c1c1404d403e548d537c7a9c)
+        ;
+
+        
+    
+    
+            circle_marker_c02bed7918d16315f77889e0bd47161f.bindTooltip(
+                `<div>
+                     Tamarix indica
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_83307d0cbe5ebe3deebc69fa42d1ad75 = L.circleMarker(
+                [24.7638, 67.0699],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_e7830e52785159c2d89f4e73d68e4500 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_faffa7161aedca3dfc650bfccaa5863b = $(`<div id="html_faffa7161aedca3dfc650bfccaa5863b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Tribulus terrestris</td></tr> <tr><th>Family</th><td>Zygophyllaceae</td></tr> <tr><th>Latitude</th><td>24.7638</td></tr> <tr><th>Longitude</th><td>67.0699</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_e7830e52785159c2d89f4e73d68e4500.setContent(html_faffa7161aedca3dfc650bfccaa5863b);
+            
+        
+
+        circle_marker_83307d0cbe5ebe3deebc69fa42d1ad75.bindPopup(popup_e7830e52785159c2d89f4e73d68e4500)
+        ;
+
+        
+    
+    
+            circle_marker_83307d0cbe5ebe3deebc69fa42d1ad75.bindTooltip(
+                `<div>
+                     Tribulus terrestris
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_638276fb5822f4ed0f1b9001e06e7336 = L.circleMarker(
+                [24.862, 66.8529],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_cd75381a01a3fc30fa6db59235e12cd1 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_ff237fe34a33c662de4d8820cd3952ed = $(`<div id="html_ff237fe34a33c662de4d8820cd3952ed" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Urochondra setulosa</td></tr> <tr><th>Family</th><td>Poaceae</td></tr> <tr><th>Latitude</th><td>24.8620</td></tr> <tr><th>Longitude</th><td>66.8529</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_cd75381a01a3fc30fa6db59235e12cd1.setContent(html_ff237fe34a33c662de4d8820cd3952ed);
+            
+        
+
+        circle_marker_638276fb5822f4ed0f1b9001e06e7336.bindPopup(popup_cd75381a01a3fc30fa6db59235e12cd1)
+        ;
+
+        
+    
+    
+            circle_marker_638276fb5822f4ed0f1b9001e06e7336.bindTooltip(
+                `<div>
+                     Urochondra setulosa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8ee8eb7e934c6b1f00321fef11316ed3 = L.circleMarker(
+                [24.7734, 67.0585],
+                {"bubblingMouseEvents": true, "color": "#173f39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f7568", "fillOpacity": 0.82, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 1}
+            ).addTo(feature_group_9021574231659ecb1e7620da0d8ddc5f);
+        
+    
+        var popup_cd6eb7eef99f6fd18b944bde665ff7f7 = L.popup({
+  "maxWidth": 380,
+});
+
+        
+            
+                var html_485c5f74f81467cccef2f14f651394f1 = $(`<div id="html_485c5f74f81467cccef2f14f651394f1" style="width: 100.0%; height: 100.0%;">     <div style="font-family: IBM Plex Sans, system-ui, -apple-system, Segoe UI, sans-serif; min-width: 260px; max-width: 340px;">       <h4 style="margin: 0 0 8px; color: #173f39; font-family: Georgia, serif; font-weight: 600;">Halophyte Survey Record</h4>       <table style="border-collapse: collapse; width: 100%; font-size: 12px;">         <tr><th>Species</th><td>Zygophyllum simplex</td></tr> <tr><th>Family</th><td>Zygophyllaceae</td></tr> <tr><th>Latitude</th><td>24.7734</td></tr> <tr><th>Longitude</th><td>67.0585</td></tr> <tr><th>Source</th><td>Niaz et al., 2021, Table 2</td></tr> <tr><th>Study Area</th><td>Karachi Coast</td></tr>       </table>     </div>     </div>`)[0];
+                popup_cd6eb7eef99f6fd18b944bde665ff7f7.setContent(html_485c5f74f81467cccef2f14f651394f1);
+            
+        
+
+        circle_marker_8ee8eb7e934c6b1f00321fef11316ed3.bindPopup(popup_cd6eb7eef99f6fd18b944bde665ff7f7)
+        ;
+
+        
+    
+    
+            circle_marker_8ee8eb7e934c6b1f00321fef11316ed3.bindTooltip(
+                `<div>
+                     Zygophyllum simplex
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_9021574231659ecb1e7620da0d8ddc5f.addTo(map_1eea1d2038e080983880f0b2d54a17b7);
+        
+    
+            var layer_control_8b393179c60a7060fa3324c3bf6385d7_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_47ec774fdc3ca48b465a347403f0aab2,
+                },
+                overlays :  {
+                    "Karachi Coast Context" : geo_json_e9a43331329c2d556930ed459ff28d74,
+                    "Karachi Coast Study Area" : geo_json_c3a6e8fcbfc0bfbb00dc606386cda1ba,
+                    "Observed Halophyte Locations" : feature_group_9021574231659ecb1e7620da0d8ddc5f,
+                },
+            };
+            let layer_control_8b393179c60a7060fa3324c3bf6385d7 = L.control.layers(
+                layer_control_8b393179c60a7060fa3324c3bf6385d7_layers.base_layers,
+                layer_control_8b393179c60a7060fa3324c3bf6385d7_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_1eea1d2038e080983880f0b2d54a17b7);
+
+        
+    
+            tile_layer_47ec774fdc3ca48b465a347403f0aab2.addTo(map_1eea1d2038e080983880f0b2d54a17b7);
+        
+    
+            geo_json_e9a43331329c2d556930ed459ff28d74.addTo(map_1eea1d2038e080983880f0b2d54a17b7);
+        
+    
+            geo_json_c3a6e8fcbfc0bfbb00dc606386cda1ba.addTo(map_1eea1d2038e080983880f0b2d54a17b7);
+        
+    
+            feature_group_9021574231659ecb1e7620da0d8ddc5f.addTo(map_1eea1d2038e080983880f0b2d54a17b7);
+        
+</script>
+</html>
