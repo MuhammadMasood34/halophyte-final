@@ -13,7 +13,6 @@ import pandas as pd
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 NUMERIC_FIELDS = [
-    "gr50_avg",
     "na_shoot",
     "na_root",
     "cl_shoot",
@@ -190,8 +189,8 @@ def clean_dataset(raw_df: pd.DataFrame) -> pd.DataFrame:
     )
     clean_df["mechanism_encoded"] = clean_df["mechanism"].map(MECHANISM_ENCODER)
 
-    required = ["species", "common_name", "mechanism", "mechanism_encoded", "gr50_min", "gr50_max"] + NUMERIC_FIELDS
-    clean_df = clean_df[required].dropna(subset=["mechanism_encoded"] + NUMERIC_FIELDS).reset_index(drop=True)
+    required = ["species", "common_name", "mechanism", "mechanism_encoded", "gr50_min", "gr50_max", "gr50_avg"] + NUMERIC_FIELDS
+    clean_df = clean_df[required].dropna(subset=["mechanism_encoded", "gr50_avg"] + NUMERIC_FIELDS).reset_index(drop=True)
     return clean_df
 
 
