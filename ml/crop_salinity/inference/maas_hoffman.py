@@ -100,10 +100,11 @@ def assess_risk_level(ec_soil: float, crop_id: str) -> str:
     """
     params = get_crop_params(crop_id)
     ec_threshold = params['ec_threshold']
+    gr50 = params['gr50']
     
     if ec_soil <= ec_threshold:
         return "Low"
-    elif ec_soil <= ec_threshold * 1.5:
+    elif ec_soil <= gr50:
         return "Medium"
     else:
         return "High"
@@ -186,8 +187,8 @@ def suggest_alternatives(ec_soil: float, current_crop_id: str, top_n: int = 3) -
                 'note': params.get('note', ''),
             })
     
-    # Sort by ec_threshold (highest tolerance first)
-    alternatives.sort(key=lambda x: x['ec_threshold'], reverse=True)
+    # Sort by GR50 (highest tolerance first)
+    alternatives.sort(key=lambda x: x['gr50'], reverse=True)
     
     return alternatives[:top_n]
 

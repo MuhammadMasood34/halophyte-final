@@ -10,6 +10,7 @@ import {
 } from '../lib/predictionApi';
 
 const FIELD_LABELS: Record<string, string> = {
+  gr50_avg: 'GR50 Average (dS/m)',
   na_shoot: 'Na+ Shoot (mmol kg-1 Tissue DW)',
   na_root: 'Na+ Root (mmol kg-1 Tissue DW)',
   cl_shoot: 'Cl- Shoot (mmol kg-1 Tissue DW)',
@@ -347,6 +348,7 @@ export default function Prediction() {
           ) : null}
 
           <div className="prediction-result-grid">
+            <PredictionGroup title="GR50" fields={['gr50_avg']} predictions={result.predictions} />
             <PredictionGroup title="Na+" fields={['na_shoot', 'na_root']} predictions={result.predictions} />
             <PredictionGroup title="Cl-" fields={['cl_shoot', 'cl_root']} predictions={result.predictions} />
             <PredictionGroup title="K+" fields={['k_shoot', 'k_root']} predictions={result.predictions} />

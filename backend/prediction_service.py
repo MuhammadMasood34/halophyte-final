@@ -11,6 +11,8 @@ from schemas import PredictionRequest
 
 
 FIELD_ALIASES = {
+    "gr50_average": "gr50_avg",
+    "gr50_avg_ds_m": "gr50_avg",
     "na_shoot_mmol_kg_dw": "na_shoot",
     "na_root_mmol_kg_dw": "na_root",
     "cl_shoot_mmol_kg_dw": "cl_shoot",
@@ -176,6 +178,12 @@ def species_anchored_regression(
         base_value = species_row[field]
         if pd.isna(base_value):
             base_value = resources.dataset[field].dropna().mean()
+
+        # GR50 is a verified species characteristic. Ion inputs can inform
+        # other estimates, but must never change the selected species' GR50.
+        if field == "gr50_avg":
+            predictions[field] = round(float(base_value), 3)
+            continue
 
         slope, scope = regression_slope_for_target(
             known_field=known_field,
