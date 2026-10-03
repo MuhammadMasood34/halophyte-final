@@ -116,7 +116,7 @@ def popup_html(row: pd.Series) -> str:
 def create_map(points_df: pd.DataFrame, context_geojson: dict[str, object], study_area: dict[str, object]) -> folium.Map:
     center_lat = float(points_df["latitude"].mean())
     center_lon = float(points_df["longitude"].mean())
-    halophyte_map = folium.Map(location=[center_lat, center_lon], zoom_start=10, tiles="CartoDB positron")
+    halophyte_map = folium.Map(location=[center_lat, center_lon], zoom_start=10, tiles="OpenStreetMap")
 
     folium.GeoJson(
         context_geojson,
